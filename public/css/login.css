@@ -241,3 +241,22 @@ footer .container .text-muted {
     background: #4aa1f3
 }
 
+.btn-gplus{
+    background: #e44b34;
+    border-radius: 0;
+    color: white;
+    width: 100px;
+}
+
+.btn-gplus:link, .btn-gplus:visited{
+    color: white;
+    text-decoration: none;
+    background: #e44b34
+}
+
+.btn-gplus:active, .btn-gplus:hover {
+    color: white;
+    text-decoration: none;
+    background: #e44b34
+}
+

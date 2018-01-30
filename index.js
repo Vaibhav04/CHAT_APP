@@ -13,7 +13,7 @@ const passport = require('passport');
 
 const container = require('./container');
 
-container.resolve(function(users, _) {
+container.resolve(function(users, _, admin) {
      mongoose.Promise = global.Promise;
      mongoose.connect('mongodb://localhost/chatapp');
     const app = SetupExpress();
@@ -28,12 +28,14 @@ container.resolve(function(users, _) {
         
         const router = require('express-promise-router')();
         users.setRouting(router);
+        admin.setRouting(router);
         app.use(router);
     }
 
     function ConfigureExpress(app) {
         require('./passport/passport-local');
         require('./passport/passport-facebook');
+        require('./passport/passport-google');
 
         app.use(morgan('dev'));
         app.use(express.static('public'));
