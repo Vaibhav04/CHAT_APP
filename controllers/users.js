@@ -3,7 +3,6 @@ module.exports = function(_, passport, Uservalidations) {
         setRouting: function(router) {
             router.get('/', this.indexPage);
             router.get('/signup', this.getSignUp);
-            router.get('/home', this.home);
             router.get('/auth/facebook', this.getFacebookLogin);
             router.get('/auth/facebook/callback', this.facebookLogin);
             router.get('/auth/google', this.getGoogleLogin);
@@ -55,9 +54,5 @@ module.exports = function(_, passport, Uservalidations) {
             failureRedirect: '/signup',
             failureFlash: true,
         }),
-
-        home: function(req, res) {
-            return res.render('home');
-        }
     }
 }

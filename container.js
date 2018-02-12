@@ -7,7 +7,8 @@ const simpleDependencies = [
     ['passport', 'passport'],
     ['formidable', 'formidable'],
     ['Group', './models/group'],
-    ['aws', './helpers/AWSupload']
+    ['aws', './helpers/AWSupload'],
+    ['async', 'async']
 ];
 
 simpleDependencies.forEach(function(val) {

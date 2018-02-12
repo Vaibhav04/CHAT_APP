@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Vaibhav04/CHAT_APP#readme",
   "dependencies": {
+    "async": "^2.6.0",
     "aws-sdk": "^2.188.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
